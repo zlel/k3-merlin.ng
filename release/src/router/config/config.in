@@ -1809,3 +1809,7 @@ config RTCONFIG_ETHOBD
 config RTCONFIG_NTPD
 	bool "ntp & ntpd support"
 	default n
+
+config RTCONFIG_SOFTCENTER
+	bool "softcenter"
+	default n
