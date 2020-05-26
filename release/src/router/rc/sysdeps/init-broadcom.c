@@ -14,6 +14,7 @@
 #include "shared.h"
 #include "version.h"
 #include "interface.h"
+#include "k3.h"
 
 #include <termios.h>
 #include <dirent.h>
@@ -2878,6 +2879,9 @@ void init_others(void)
 #endif
 #ifdef RTAC68U
 	ac68u_cofs();
+#endif
+#if defined(RTK3) && defined(RTCONFIG_ROMCFE)
+	update_cfe_k3();
 #endif
 }
 #endif	// HND_ROUTER
