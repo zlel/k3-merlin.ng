@@ -1330,6 +1330,7 @@ void generate_switch_para(void)
 		}
 
 		case MODEL_RTAC3100:
+		case MODEL_RTK3:
 		case MODEL_RTAC88U:
 		{
 			char *hw_name = "et0";
@@ -2082,6 +2083,7 @@ reset_mssid_hwaddr(int unit)
 			case MODEL_RTAC88U:
 			case MODEL_RTAC86U:
 			case MODEL_RTAC3100:
+			case MODEL_RTK3:
 #ifdef RTAC3200
 				if (unit < 2)
 					snprintf(macaddr_str, sizeof(macaddr_str), "%d:macaddr", 1 - unit);
@@ -2306,6 +2308,7 @@ void init_wl(void)
 		case MODEL_RTAC1200G:
 		case MODEL_RTAC1200GP:
 		case MODEL_RTAC3100:
+		case MODEL_RTK3:
 		case MODEL_RTAC3200:
 		case MODEL_RTAC5300:
 		case MODEL_GTAC5300:
@@ -2425,6 +2428,7 @@ void init_wl_compact(void)
 		case MODEL_RTAC1200G:
 		case MODEL_RTAC1200GP:
 		case MODEL_RTAC3100:
+		case MODEL_RTK3:
 		case MODEL_RTAC3200:
 		case MODEL_RTAC5300:
 		case MODEL_GTAC5300:
@@ -2442,6 +2446,7 @@ void init_wl_compact(void)
 		(model == MODEL_RTAC1200G) ||
 		(model == MODEL_RTAC1200GP) ||
 		(model == MODEL_RTAC3100) ||
+		(model == MODEL_RTK3) ||
 		(model == MODEL_RTAC3200) ||
 		(model == MODEL_RTAC5300) ||
 		(model == MODEL_GTAC5300) ||
@@ -2493,6 +2498,7 @@ void fini_wl(void)
 		(model == MODEL_RTAC1200G) ||
 		(model == MODEL_RTAC1200GP) ||
 		(model == MODEL_RTAC3100) ||
+		(model == MODEL_RTK3) ||
 		(model == MODEL_RTAC3200) ||
 		(model == MODEL_RTAC5300) ||	/* will be removed in 7.x */
 		(model == MODEL_GTAC5300) ||	/* will be removed in 7.x */
@@ -2640,6 +2646,7 @@ void init_syspara(void)
 			break;
 
 		case MODEL_RTAC3100:
+		case MODEL_RTK3:
 		case MODEL_GTAC5300:
 		case MODEL_RTAC86U:
 			if (!nvram_get("lan_hwaddr"))
@@ -5716,6 +5723,7 @@ _dprintf("*** Multicast IPTV: config Singtel TR069 on wan port ***\n");
 		break;
 
 	case MODEL_RTAC3100:
+	case MODEL_RTK3:
 	case MODEL_RTAC88U:
 				/* If enable gmac3, CPU port is 8 */
 #ifdef RTCONFIG_RGMII_BRCM5301X

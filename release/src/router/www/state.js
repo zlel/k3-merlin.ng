@@ -475,7 +475,7 @@ function isSupport(_ptn){
 	else if(_ptn == "traffic_analyzer"){
 		if(!bwdpi_support) return false;
 
-		if(( based_modelid == "BRT-AC828" || based_modelid == "GT-AC5300" || based_modelid == "GT-AC9600" || based_modelid == "RT-AC5300" || based_modelid == "RT-AC3200" || based_modelid == "RT-AC3100" || 
+		if(( based_modelid == "BRT-AC828" || based_modelid == "GT-AC5300" || based_modelid == "GT-AC9600" || based_modelid == "RT-AC5300" || based_modelid == "RT-AC3200" || based_modelid == "RT-AC3100" || based_modelid == "RT-K3" ||
 			based_modelid == "RT-AC88U" || based_modelid == "RT-AC87U" || based_modelid == "RT-AC86U" || based_modelid == "AC2900" || based_modelid == "RT-AC85U" ||
 			based_modelid == "RT-AC65U" || based_modelid == "4G-AC68U" || based_modelid == "DSL-AC68U" || based_modelid == "RT-AC68U" || based_modelid == "RT-AC68R" || 
 			based_modelid == "RT-AC68W" || based_modelid == "RT-AC68RW" || based_modelid == "RT-AC1900P" || 
@@ -487,7 +487,7 @@ function isSupport(_ptn){
 		return false;
 	}
 	else if(_ptn == "meoVoda"){
-		var meoVoda_support_models = ["RT-N14U", "BRT-AC828", "RT-AD7200", "RT-AC5300", "GT-AC5300", "RT-AC3200", "RT-AC3100", "RT-AC1200G+", "RT-AC88U", "RT-AC86U", "AC2900", "RT-AC87U", 
+		var meoVoda_support_models = ["RT-N14U", "BRT-AC828", "RT-AD7200", "RT-AC5300", "GT-AC5300", "RT-AC3200", "RT-AC3100", "RT-AC3100", "RT-AC1200G+", "RT-AC88U", "RT-AC86U", "AC2900", "RT-AC87U", 
 							  "RT-AC68U", "RT-AC68A", "4G-AC68U", "RT-AC66U", "RT-AC56U", "RT-AC51U", "RT-N66U", "RT-N18U", "BLUECAVE", "RT-N800HP"];
 		return (meoVoda_support_models.indexOf(based_modelid) >= 0)? true : false;
 	}
@@ -691,7 +691,7 @@ if(tmo_support && isMobile()){
 		location.href = "MobileQIS_Login.asp";
 }
 	
-if(isMobile() && (based_modelid == "RT-AC88U" || based_modelid == "RT-AC86U" || based_modelid == "AC2900" || based_modelid == "RT-AC3100" || based_modelid == "RT-AC5300" || based_modelid == "GT-AC5300" || based_modelid == "GT-AC9600"))
+if(isMobile() && (based_modelid == "RT-AC88U" || based_modelid == "RT-AC86U" || based_modelid == "AC2900" || based_modelid == "RT-AC3100" || based_modelid == "RT-K3" ||based_modelid == "RT-AC5300" || based_modelid == "GT-AC5300" || based_modelid == "GT-AC9600"))
 	QISWIZARD = "QIS_wizard_m.htm";	
 
 var stopFlag = 0;

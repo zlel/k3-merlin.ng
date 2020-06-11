@@ -1432,6 +1432,7 @@ misc_defaults(int restore_defaults)
 		case MODEL_RTAC5300:
 		case MODEL_RTAC88U:
 		case MODEL_RTAC3100:
+		case MODEL_RTK3:
 			nvram_set("reboot_time", "140");
 			break;
 		case MODEL_RTAC3200:
@@ -2692,6 +2693,12 @@ gmac3_override_nvram()
 			}
 			break;
 		case MODEL_RTAC3100:
+			nvram_set("fwddevs", "fwd0 fwd1");
+			nvram_set("fwd_cpumap", "d:x:2:163:0 d:l:5:169:1");
+			nvram_set("fwd_wlandevs", "eth1 eth2");
+
+			break;
+		case MODEL_RTK3:
 			nvram_set("fwddevs", "fwd0 fwd1");
 			nvram_set("fwd_cpumap", "d:x:2:163:0 d:l:5:169:1");
 			nvram_set("fwd_wlandevs", "eth1 eth2");
@@ -7200,10 +7207,11 @@ int init_nvram(void)
 #endif
 	case MODEL_RTAC88U:
 	case MODEL_RTAC3100:
+	case MODEL_RTK3:
 		ldo_patch();
 
 		set_tcode_misc();
-#if defined(RTAC88U) || defined(RTAC3100)
+#if defined(RTAC88U) || defined(RTAC3100)|| defined(RTK3)
 		//if(nvram_match("lazy_et", "1"))
 			nvram_set("et_rxlazy_timeout",  "1000");
 		//else

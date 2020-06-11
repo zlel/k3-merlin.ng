@@ -299,7 +299,7 @@ function initial(){
 			based_modelid == "RT-AC56S" || based_modelid == "RT-AC56U" ||
 			based_modelid == "RT-AC68U" || based_modelid == "RT-AC68A" || based_modelid == "DSL-AC68U" || based_modelid == "4G-AC68U" ||
 			based_modelid == "RT-AC87U" || based_modelid == "EA-AC87" ||
-			based_modelid == "RT-AC88U" || based_modelid == "RT-AC86U" || based_modelid == "AC2900" || based_modelid == "RT-AC3100" ||
+			based_modelid == "RT-AC88U" || based_modelid == "RT-AC86U" || based_modelid == "AC2900" || based_modelid == "RT-AC3100" || based_modelid == "RT-K3" ||
 			based_modelid == "RT-AC5300" || based_modelid == "GT-AC5300")
 		{
 			if(no_vht_support){
@@ -321,7 +321,7 @@ function initial(){
 		if( based_modelid == "RT-AC55U" || based_modelid == "RT-AC55UHP")
 			inputCtrl(document.form.traffic_5g, 1);
 
-		if(	based_modelid == "RT-AC88U" || based_modelid == "RT-AC86U" || based_modelid == "AC2900" || based_modelid == "RT-AC3100" ||
+		if(	based_modelid == "RT-AC88U" || based_modelid == "RT-AC86U" || based_modelid == "AC2900" || based_modelid == "RT-AC3100" || based_modelid == "RT-K3" ||
 			based_modelid == "RT-AC5300" || based_modelid == "GT-AC5300"){
 			if(document.form.wl_nmode_x.value == "0" || document.form.wl_nmode_x.value == "8"){		// wireless mode: Auto , N/AC mixed
 				inputCtrl(document.form.wl_turbo_qam, 1);
@@ -369,7 +369,7 @@ function initial(){
 			based_modelid == "RT-N18U" ||
 			based_modelid == "RT-AC87U" ||
 			based_modelid == "RT-AC68U" || based_modelid == "RT-AC68A" || based_modelid == "DSL-AC68U" || based_modelid == "4G-AC68U" ||
-			based_modelid == "RT-AC88U" || based_modelid == "RT-AC86U" || based_modelid == "AC2900" || based_modelid == "RT-AC3100" ||
+			based_modelid == "RT-AC88U" || based_modelid == "RT-AC86U" || based_modelid == "AC2900" || based_modelid == "RT-AC3100" || based_modelid == "RT-K3" ||
 			based_modelid == "RT-AC5300" || based_modelid == "GT-AC5300")
 		{
 			if(based_modelid == "RT-N18U" && bootLoader_ver < 2000)
@@ -382,7 +382,7 @@ function initial(){
 					inputCtrl(document.form.wl_turbo_qam, 0);
 				}
 				
-				if(	based_modelid == "RT-AC88U" || based_modelid == "RT-AC86U" || based_modelid == "AC2900" || based_modelid == "RT-AC3100" ||
+				if(	based_modelid == "RT-AC88U" || based_modelid == "RT-AC86U" || based_modelid == "AC2900" || based_modelid == "RT-AC3100" || based_modelid == "RT-K3" ||
 					based_modelid == "RT-AC5300" || based_modelid == "GT-AC5300"){
 					$("#turbo_qam_title").html("<#WLANConfig11b_x_ModulationScheme#>");
 					var desc = ["Up to MCS 7 (802.11n)", "Up to MCS 9 (TurboQAM/256-QAM)", "Up to MCS 11 (NitroQAM/1024-QAM)"];
@@ -485,7 +485,7 @@ function initial(){
 		based_modelid == "RT-AC56U" || based_modelid == "RT-AC56S" ||
 		based_modelid == "RT-AC68U" || based_modelid == "RT-AC68A" || based_modelid == "DSL-AC68U" || based_modelid == "4G-AC68U" ||
 		based_modelid == "RT-AC87U" || based_modelid == "RT-AC3200" ||
-		based_modelid == "RT-AC88U" || based_modelid == "RT-AC86U" || based_modelid == "AC2900" || based_modelid == "RT-AC3100" || based_modelid == "RT-AC5300" ||
+		based_modelid == "RT-AC88U" || based_modelid == "RT-AC86U" || based_modelid == "AC2900" || based_modelid == "RT-AC3100" || based_modelid == "RT-K3" || based_modelid == "RT-AC5300" ||
 		based_modelid == "GT-AC5300" || based_modelid == "RT-AC1200G" || based_modelid == "RT-AC1200G+"){
 		
 		inputCtrl(document.form.wl_atf, 1);
@@ -712,7 +712,7 @@ function applyRule(){
 			document.form.wl_TxPower.value = "";	
 		}
 		
-		if(	based_modelid == "RT-AC88U" || based_modelid == "RT-AC86U" || based_modelid == "AC2900" || based_modelid == "RT-AC3100" ||
+		if(	based_modelid == "RT-AC88U" || based_modelid == "RT-AC86U" || based_modelid == "AC2900" || based_modelid == "RT-AC3100" || based_modelid == "RT-K3" ||
 			based_modelid == "RT-AC5300" || based_modelid == "GT-AC5300"){
 			document.form.action_wait.value = "10";
 		}
@@ -1777,7 +1777,7 @@ function checkWLReady(){
 						</td>
 					</tr>
 					
-					<!--Multi-User MU-MIMO for RT-AC88U, RT-AC86U, AC2900, RT-AC3100, RT-AC5300 and RT-AC87U 5 GHz only-->
+					<!--Multi-User MU-MIMO for RT-AC88U, RT-AC86U, AC2900, RT-AC3100, RT-K3, RT-AC5300 and RT-AC87U 5 GHz only-->
 					<tr id="wl_MU_MIMO_field" style="display:none">
 						<th><a class="hintstyle" href="javascript:void(0);" onClick=""><#WLANConfig11b_MUMIMO_itemdesc#></a></th>
 						<td>

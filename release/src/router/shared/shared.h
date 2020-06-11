@@ -720,6 +720,7 @@ enum {
 	MODEL_GTAX6000,
 	MODEL_GTAX6000N,
 	MODEL_GTAX6000S,
+	MODEL_RTK3,
 };
 
 /* NOTE: Do not insert new entries in the middle of this enum,
@@ -1056,6 +1057,7 @@ static inline int have_usb3_led(int model)
 		case MODEL_RTAC88U:
 		case MODEL_RTAC86U:
 		case MODEL_RTAC3100:
+		case MODEL_RTK3:
 		case MODEL_RTAC5300:
 		case MODEL_GTAC5300:
 			return 1;
@@ -2202,7 +2204,7 @@ static inline int is_m2ssd_port(__attribute__ ((unused)) char *usb_node) { retur
 #define WAN0DEV "vlan2"
 #endif
 
-#if defined(RTAC88U) || defined(RTAC86U) || defined(AC2900) || defined(RTAC3100)
+#if defined(RTAC88U) || defined(RTAC86U) || defined(AC2900) || defined(RTAC3100) || defined(RTK3)
 #ifdef RTCONFIG_EXT_RTL8365MB
 #define WAN0DEV "vlan2"
 #else

@@ -392,6 +392,7 @@ int init_toggle(void)
 		case MODEL_RTAC88U:
 		case MODEL_RTAC86U:
 		case MODEL_RTAC3100:
+		case MODEL_RTK3:
 			nvram_set("btn_ez_radiotoggle", "1");
 			return BTN_WIFI_TOG;
 #endif
@@ -4562,6 +4563,7 @@ void led_check(int sig)
 		case MODEL_RTAC88U:
 		case MODEL_RTAC86U:
 		case MODEL_RTAC3100:
+		case MODEL_RTK3:
 		default:
 			snprintf(p1_node, sizeof(p1_node), "%s", nvram_safe_get("usb_path1_node"));
 			snprintf(p2_node, sizeof(p2_node), "%s", nvram_safe_get("usb_path2_node"));

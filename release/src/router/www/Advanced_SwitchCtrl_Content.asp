@@ -22,7 +22,7 @@ var lacp_support = isSupport("lacp");
 var lacp_enabled = '<% nvram_get("lacp_enabled"); %>' == 1 ?true: false;
 var bonding_policy_support = false;
 if( lacp_support 
-&& (based_modelid == "GT-AC5300" || based_modelid == "RT-AC86U" || based_modelid == "AC2900" || based_modelid == "RT-AC87U" || based_modelid == "RT-AC5300" || based_modelid == "RT-AC88U" || based_modelid == "RT-AC3100")){
+&& (based_modelid == "GT-AC5300" || based_modelid == "RT-AC86U" || based_modelid == "AC2900" || based_modelid == "RT-AC87U" || based_modelid == "RT-AC5300" || based_modelid == "RT-AC88U" || based_modelid == "RT-AC3100" || based_modelid == "RT-K3")){
 	bonding_policy_support = true;
 	var bonding_policy_value = '<% nvram_get("bonding_policy"); %>';
 }

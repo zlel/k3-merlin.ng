@@ -974,7 +974,7 @@ struct nvram_tuple router_defaults[] = {
 	{ "wl2_bsd_if_qualify_policy_x", "0 0x4", CKN_STR64, CKN_TYPE_DEFAULT, CKN_ACC_LEVEL_DEFAULT, CKN_ENC_DEFAULT, 0 },
 	{ "bsd_bounce_detect_x", "180 2 3600", CKN_STR64, CKN_TYPE_DEFAULT, CKN_ACC_LEVEL_DEFAULT, CKN_ENC_DEFAULT, 0 },
 	{ "bsd_aclist_timeout", "3", CKN_STR64, CKN_TYPE_DEFAULT, CKN_ACC_LEVEL_DEFAULT, CKN_ENC_DEFAULT, 0 },
-#elif defined(RTAC88U) || defined(RTAC86U) || defined(AC2900) || defined(RTAC3100)
+#elif defined(RTAC88U) || defined(RTAC86U) || defined(AC2900) || defined(RTAC3100) || defined(RTK3)
 	// Dual-Band
 #if defined(RTAC86U) || defined(AC2900)
 	{ "bsd_ifnames", "eth5 eth6", CKN_STR64, CKN_TYPE_DEFAULT, CKN_ACC_LEVEL_DEFAULT, CKN_ENC_DEFAULT, 0 },
@@ -4293,7 +4293,7 @@ struct nvram_tuple bcm4360ac_defaults[] = {
 	{ "2:ledbh10", "7", CKN_STR_DEFAULT, CKN_TYPE_DEFAULT, CKN_ACC_LEVEL_DEFAULT, CKN_ENC_DEFAULT, 0 },
 	{ 0, 0, 0, 0, 0, 0, 0 }
 };
-#elif defined(RTAC88U) || defined(RTAC3100) || defined(RTAC5300) || defined(GTAC5300) || defined(RTAC86U) || defined(AC2900)
+#elif defined(RTAC88U) || defined(RTAC3100) || defined(RTK3) || defined(RTAC5300) || defined(GTAC5300) || defined(RTAC86U) || defined(AC2900)
 struct nvram_tuple bcm4360ac_defaults[] = {
 	{ 0, 0, 0, 0, 0, 0, 0 }
 };

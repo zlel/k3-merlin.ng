@@ -641,6 +641,7 @@ int start_vlan(void)
 	switch (get_model()) {
 		case MODEL_RTAC88U:
 		case MODEL_RTAC3100:
+		case MODEL_RTK3:
 		case MODEL_RTAC5300:
 			break;
 		default:

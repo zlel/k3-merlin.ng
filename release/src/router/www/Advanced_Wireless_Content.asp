@@ -734,7 +734,7 @@ function enableSmartCon(val){
 		value = ["1"];
 		add_options_x2(document.form.smart_connect_t, desc, value, val);	
 	}
-	else if(based_modelid == "RT-AC88U" || based_modelid == "RT-AC86U" || based_modelid == "AC2900" || based_modelid == "RT-AC3100" || based_modelid == "BLUECAVE"){
+	else if(based_modelid == "RT-AC88U" || based_modelid == "RT-AC86U" || based_modelid == "AC2900" || based_modelid == "RT-AC3100" || based_modelid == "RT-K3" || based_modelid == "BLUECAVE"){
 		desc = ["Dual-Band Smart Connect (2.4GHz and 5GHz)"];
 		value = ["1"];
 		add_options_x2(document.form.smart_connect_t, desc, value, val);		
@@ -748,6 +748,7 @@ function enableSmartCon(val){
 		based_modelid == "RT-AC86U" ||
 		based_modelid == "AC2900" ||
 		based_modelid == "RT-AC3100" ||
+		based_modelid == "RT-K3" ||
 		based_modelid == "BLUECAVE"){
 		document.getElementById("smartcon_rule_link").style.display = "none";
 		if(val == 0){
@@ -974,7 +975,7 @@ function change_wl_nmode(o){
 
 										$('#radio_smartcon_enable').iphoneSwitch( smart_connect_flag_t > 0, 
 										 function() {
-											if(based_modelid != "RT-AC5300" && based_modelid != "GT-AC5300" && based_modelid !="RT-AC3200" && based_modelid != "RT-AC88U" && based_modelid != "RT-AC86U" && based_modelid != "AC2900" && based_modelid != "RT-AC3100" && based_modelid != "BLUECAVE")
+											if(based_modelid != "RT-AC5300" && based_modelid != "GT-AC5300" && based_modelid !="RT-AC3200" && based_modelid != "RT-AC88U" && based_modelid != "RT-AC86U" && based_modelid != "AC2900" && based_modelid != "RT-AC3100" && based_modelid != "RT-K3" && based_modelid != "BLUECAVE")
 												enableSmartCon(1);
 											else{
 												if(document.form.smart_connect_t.value)

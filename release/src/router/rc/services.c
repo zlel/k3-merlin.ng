@@ -11229,6 +11229,7 @@ check_ddr_done:
 		case MODEL_RTAC5300:
 		case MODEL_GTAC5300:
 		case MODEL_RTAC3100:
+		case MODEL_RTK3:
 		case MODEL_RTAC88U:
 		case MODEL_RTAC86U:
 			set_wltxpower();
@@ -14755,7 +14756,7 @@ void setup_leds()
 		if ((model == MODEL_RTAC56U) || (model == MODEL_RTAC56S) ||
 		    (model == MODEL_RTAC68U) || (model == MODEL_RTAC87U) ||
 		    (model == MODEL_RTAC3200) || (model == MODEL_RTAC88U) ||
-		    (model == MODEL_RTAC3100) || (model == MODEL_RTAC5300) ||
+		    (model == MODEL_RTAC3100) || (model == MODEL_RTK3) || (model == MODEL_RTAC5300) ||
 		    (model == MODEL_RTAC86U)) {
 			setAllLedOff();
 			if (model == MODEL_RTAC87U)
@@ -14816,7 +14817,7 @@ void setup_leds()
 		led_control_atomic(LED_SWITCH, LED_ON);
 		led_control_atomic(LED_POWER, LED_ON);
 
-#if defined(RTAC3200) || defined(RTAC88U) || defined(RTAC3100) || defined(RTAC5300)
+#if defined(RTAC3200) || defined(RTAC88U) || defined(RTAC3100) || defined(RTK3) || defined(RTAC5300)
 		kill_pidfile_s("/var/run/wanduck.pid", SIGUSR2);
 #endif
 	}

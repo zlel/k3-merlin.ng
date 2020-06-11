@@ -14,6 +14,10 @@
 #define MODEL_PROTECT "RT-AC3100"
 #endif
 
+#if defined(RTK3)
+#define MODEL_PROTECT "RT-K3"
+#endif
+
 #if defined(RTAC5300)
 #define MODEL_PROTECT "RT-AC5300"
 #endif
