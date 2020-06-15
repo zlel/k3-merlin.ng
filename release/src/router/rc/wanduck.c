@@ -507,7 +507,6 @@ void enable_wan_led()
 			case MODEL_RTAC88U:
 			case MODEL_RTAC86U:
 			case MODEL_RTAC3100:
-			case MODEL_RTK3:
 #ifndef HND_ROUTER
 				eval("et", "-i", "eth0", "robowr", "0", "0x18", "0x01ff");
 				eval("et", "-i", "eth0", "robowr", "0", "0x1a", "0");

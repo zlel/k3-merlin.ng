@@ -372,7 +372,7 @@ static void erp_standby_mode(int model)
 	lanport_ctrl(0);
 
 	// step4. special case
-	if (model == MODEL_RTAC88U || model == MODEL_RTAC5300 || model == MODEL_RTAC3100 || model == MODEL_RTK3) {
+	if (model == MODEL_RTAC88U || model == MODEL_RTAC5300 || model == MODEL_RTAC3100) {
 		eval("devmem", "0x18000068", "32", "0x401");
 		eval("devmem", "0x18000064", "32", "0x0");
 	}
@@ -399,7 +399,7 @@ static void erp_wakeup_mode(int model)
 		eval("rtkswitch", "15", "1");
 	}
 
-	if (model == MODEL_RTAC5300 || model == MODEL_RTAC3100 || model == MODEL_RTK3) {
+	if (model == MODEL_RTAC5300 || model == MODEL_RTAC3100) {
 		eval("devmem", "0x18000068", "32", "0x200");
 	}
 
@@ -496,7 +496,7 @@ static void ERP_CHECK_MODE()
 	// step1. check support model list
 	/*
 		support list for BRCM only
-		RT-AC5300 / RT-AC3100 / RT-K3 / RT-AC5300
+		RT-AC5300 / RT-AC3100 / RT-AC5300
 		RT-AC3200
 		RT-AC68U / RT-AC87U / DSL-AC68U
 		RT-AC66U / RT-N66U
@@ -504,7 +504,6 @@ static void ERP_CHECK_MODE()
 	int model = get_model();
 	if (model != MODEL_RTAC88U
 		&& model != MODEL_RTAC3100
-		&& model != MODEL_RTK3
 		&& model != MODEL_RTAC5300
 		&& model != MODEL_RTAC3200
 		&& model != MODEL_RTAC68U
@@ -639,7 +638,7 @@ int erp_monitor_main(int argc, char **argv)
 
 	/*
 		support list for BRCM only
-		RT-AC5300 / RT-AC3100 / RT-K3 / RT-AC5300
+		RT-AC5300 / RT-AC3100 / RT-AC5300
 		RT-AC3200
 		RT-AC68U / RT-AC87U / DSL-AC68U
 		RT-AC66U / RT-N66U
@@ -647,7 +646,6 @@ int erp_monitor_main(int argc, char **argv)
 	int model = get_model();
 	if (model != MODEL_RTAC88U
 		&& model != MODEL_RTAC3100
-		&& model != MODEL_RTK3
 		&& model != MODEL_RTAC5300
 		&& model != MODEL_RTAC3200
 		&& model != MODEL_RTAC68U
